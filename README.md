@@ -55,7 +55,7 @@ token = ripcatcha.FunCaptchaTaskProxyless(
     key='db31742e2ffd442e85653b891d1473af',
     blob=blob
 )
-if token['message'] == 'solved:
+if token['message'] == 'solved':
     print(token['token'])
 else:
     print("error", token)
