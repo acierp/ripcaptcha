@@ -9,7 +9,7 @@
 ## Examples
 ### Solving a captcha
 ```python
-token = ripcatcha.FunCaptchaTaskProxyless(
+token = ripcaptcha.FunCaptchaTaskProxyless(
     siteurl="https://www.roblox.com/",
     serviceurl="https://roblox-api.arkoselabs.com/",
     publickey="A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F",
@@ -22,7 +22,7 @@ token = ripcatcha.FunCaptchaTaskProxyless(
 ```
 ### Solving a captcha with a proxy
 ```python
-token = ripcatcha.FunCaptchaTask(
+token = ripcaptcha.FunCaptchaTask(
     siteurl="https://www.roblox.com/",
     serviceurl="https://roblox-api.arkoselabs.com/",
     publickey="A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F",
@@ -36,7 +36,7 @@ token = ripcatcha.FunCaptchaTask(
 ```
 ### Obtaining a blob and solving a captcha
 ```py
-from ripcaptcha import ripcatcha
+from ripcaptcha import ripcaptcha
 import time
 import requests
 
