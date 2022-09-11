@@ -1,7 +1,7 @@
 import requests
 import time
 
-class ripcatcha:
+class ripcaptcha:
     def FunCaptchaTaskProxyless(siteurl, serviceurl, publickey, key, delay=1, useragent=None, blob=None):
         solvej = {
         "key": key,
