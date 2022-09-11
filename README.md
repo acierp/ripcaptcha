@@ -28,7 +28,7 @@ token = ripcatcha.FunCaptchaTask(
     publickey="A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F",
     key='01191ab71d4b4ceda5a9ae21542566df',
     blob=blob,
-    "proxy": "ip:port:user:pass"
+   "proxy": "ip:port:user:pass"
 )
 ```
 ```json
