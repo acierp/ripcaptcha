@@ -45,13 +45,8 @@ def csrf():
 
 def registerinfo():
     cdetails = requests.post("https://auth.roblox.com/v2/signup", headers={"x-csrf-token":csrf(), "User-Agent":"Mozilla/5.0 (Windows; U; Windows CE) AppleWebKit/534.47.7 (KHTML, like Gecko) Version/4.1 Safari/534.47.7"}, json={"username":"fsdhfkshdfk123","password":"WE*@*!&EUAHUISFHS","birthday":"1962-04-08T23:00:00.000Z","gender":2,"isTosAgreementBoxChecked":True,"agreementIds":["848d8d8f-0e33-4176-bcd9-aa4e22ae7905","54d8a8f0-d9c8-4cf3-bd26-0cbf8af0bba3"]})
-    if cdetails.status_code != 429:
-        return cdetails.json()["errors"][0]["fieldData"].split(",")[0], cdetails.json()["errors"][0]["fieldData"].split(",")[1]
-    else:
-        print('too many requested on registerinfo, retrying.')
-        time.sleep(1); return registerinfo()
-
-
+    return cdetails.json()["errors"][0]["fieldData"].split(",")[0], cdetails.json()["errors"][0]["fieldData"].split(",")[1]
+        
 cid, blob = registerinfo()
 token = ripcatcha.FunCaptchaTaskProxyless(
     siteurl="https://www.roblox.com/",
@@ -60,5 +55,8 @@ token = ripcatcha.FunCaptchaTaskProxyless(
     key='db31742e2ffd442e85653b891d1473af',
     blob=blob
 )
-print(token['token'])
+if token['message'] == 'solved:
+    print(token['token'])
+else:
+    print("error", token)
 ```
